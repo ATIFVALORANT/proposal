@@ -120,7 +120,7 @@ const music=document.getElementById("music");
 start.onclick=()=>{
     start.style.display="none";
     box.style.display="block";
-    music.volume = 0.4;   // soft romantic volume
+    music.volume = 0.4;
     music.play();
     s1();
 };
@@ -154,14 +154,14 @@ function s3(){
 
 function s4(){
     box.innerHTML=`
-    <h2>Do you like me? 😊</h2>
+    <h2>Do you like me? 😎😜</h2>
     <button onclick="s5()">Yes</button>
     <button onmouseover="run(this)">No</button>`;
 }
 
 function s5(){
     box.innerHTML=`
-    <h2>Do you love me? ❤️</h2>
+    <h2>Do you love me? 💐💗😌</h2>
     <button onclick="s6()">Yes</button>
     <button onmouseover="run(this)">No</button>`;
 }
@@ -184,6 +184,7 @@ function openCard(){
     box.innerHTML=`
     <div class="cat">🐱</div>
     <h2>For You, Preksha ❤️</h2>
+
     <p>
     I love you — not just for who you are,
 but for how you make me feel when I’m with you.
@@ -210,8 +211,19 @@ For me, my feelings for you are real and constant. If I have to wait, I will. If
 So take your time, listen to your heart, and tell me only what you truly feel 🌷
 I’ll always be grateful for you — and I’ll always be here.
     </p>
-    <textarea rows="4" cols="34"
-    placeholder="Write something for Atif..."></textarea>
+
+    <form action="https://formsubmit.co/syedatifahmeda99@gmail.com" method="POST">
+        <textarea name="message" rows="4" cols="34"
+        placeholder="Write something for Atif..." required></textarea>
+
+        <br><br>
+
+        <input type="hidden" name="_subject" value="💌 Message from Preksha">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <button type="submit">Send 💖</button>
+    </form>
     `;
 }
 
