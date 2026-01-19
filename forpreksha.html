@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Preksha ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff758c,#ffb199);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Segoe UI', sans-serif;
+    text-align:center;
+}
+
+/* floating hearts & flowers */
+.float{
+    position:absolute;
+    animation:float 8s linear;
+    opacity:0.9;
+}
+@keyframes float{
+    from{transform:translateY(110vh);}
+    to{transform:translateY(-10vh);}
+}
+
+/* start heart */
+.start{
+    font-size:85px;
+    cursor:pointer;
+    animation:pulse 1s infinite alternate;
+}
+@keyframes pulse{
+    from{transform:scale(1);}
+    to{transform:scale(1.35);}
+}
+
+/* main card */
+#box{
+    display:none;
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    width:92%;
+    max-width:560px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.3);
+}
+
+button{
+    padding:12px 26px;
+    margin:10px;
+    border:none;
+    border-radius:14px;
+    font-size:16px;
+    cursor:pointer;
+    background:#ff4f81;
+    color:white;
+}
+
+/* envelope */
+.envelope{
+    font-size:85px;
+    cursor:pointer;
+    animation:bounce 1.5s infinite;
+}
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+/* cat */
+.cat{
+    font-size:60px;
+}
+
+/* fireworks */
+.fire{
+    position:absolute;
+    font-size:24px;
+    animation:boom 1.5s linear;
+}
+@keyframes boom{
+    from{transform:scale(0);opacity:1;}
+    to{transform:scale(2);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎹 Piano Love Music -->
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/10/26/audio_3b5f6e1c43.mp3" type="audio/mpeg">
+</audio>
+
+<div id="start" class="start">❤️</div>
+<div id="box"></div>
+
+<script>
+// floating hearts & flowers forever
+setInterval(()=>{
+    let e=document.createElement("div");
+    e.className="float";
+    e.innerHTML=Math.random()>0.5?"❤":"🌸";
+    e.style.left=Math.random()*100+"vw";
+    e.style.fontSize=(Math.random()*18+16)+"px";
+    e.style.animationDuration=(Math.random()*3+5)+"s";
+    document.body.appendChild(e);
+    setTimeout(()=>e.remove(),8000);
+},280);
+
+const start=document.getElementById("start");
+const box=document.getElementById("box");
+const music=document.getElementById("music");
+
+start.onclick=()=>{
+    start.style.display="none";
+    box.style.display="block";
+    music.volume = 0.4;   // soft romantic volume
+    music.play();
+    s1();
+};
+
+function s1(){
+    box.innerHTML=`
+    <h2>Hey Preksha 🌸</h2>
+    <p>Atif wants to tell you something</p>
+    <button onclick="s2()">OK</button>`;
+}
+
+function s2(){
+    box.innerHTML=`
+    <p>
+    When we first met in Valorant, your kindness instantly stood out.  
+    Talking to you always felt calm, easy, and genuine.  
+    You have a beautiful way of making people feel comfortable.
+    </p>
+    <button onclick="s3()">Next</button>`;
+}
+
+function s3(){
+    box.innerHTML=`
+    <p>
+    Somewhere along the way, I realized my happiest moments  
+    were the ones where I was talking to you.  
+    You slowly became someone very special to me.
+    </p>
+    <button onclick="s4()">Continue</button>`;
+}
+
+function s4(){
+    box.innerHTML=`
+    <h2>Do you like me? 😊</h2>
+    <button onclick="s5()">Yes</button>
+    <button onmouseover="run(this)">No</button>`;
+}
+
+function s5(){
+    box.innerHTML=`
+    <h2>Do you love me? ❤️</h2>
+    <button onclick="s6()">Yes</button>
+    <button onmouseover="run(this)">No</button>`;
+}
+
+function run(btn){
+    btn.style.position="absolute";
+    btn.style.left=Math.random()*80+"vw";
+    btn.style.top=Math.random()*80+"vh";
+}
+
+function s6(){
+    fireworks();
+    box.innerHTML=`
+    <h2>A special message for you 💐</h2>
+    <p>Click the envelope</p>
+    <div class="envelope" onclick="openCard()">📩</div>`;
+}
+
+function openCard(){
+    box.innerHTML=`
+    <div class="cat">🐱</div>
+    <h2>For You, Preksha ❤️</h2>
+    <p>
+    I love you — not just for who you are,
+but for how you make me feel when I’m with you.
+You bring warmth, comfort, and happiness into my life,
+and I’m truly grateful for you. ❤️
+
+Hey… I’ve been meaning to say this for a while 🌸
+We started as just two people playing Valorant, and honestly, I was always a little nervous talking to girls. I never really knew how to say the right things. But with you, it felt easy. From the very beginning, you made me feel comfortable and understood — like I wasn’t talking to a stranger, but someone close to my heart 😊
+
+Somewhere between our games, clutches, and laughs, time just flew by. I started waiting for those moments when we’d play together. I’d try my best — not just to win, but to see you smile and hear you say something nice ❤️
+And without even realizing it, my feelings for you grew… quietly, honestly, deeply.
+
+I know sometimes I send a little heart or call you something sweet, and I truly hope it never made you uncomfortable. I respect you, your feelings, and your space more than anything. I never want to take your kindness for granted — all I want is to care for you and be someone you can trust.
+
+Today, I just want to be honest — with no pressure at all.
+If you feel something for me, I’d love to know.
+And if you don’t feel it right now, or maybe never do — that’s okay too. You can tell me honestly. Even if someday you feel something for someone else, you can share that with me as well. I promise I won’t be angry or upset.
+
+I believe love should always be mutual, and it only feels right when both hearts want the same thing 💫
+No matter what your answer is, I’ll respect it completely.
+
+For me, my feelings for you are real and constant. If I have to wait, I will. If today isn’t the right time, tomorrow might be — and I’m okay with that. When someone truly settles in your heart, you don’t really look anywhere else… and that’s how it is for me.
+
+So take your time, listen to your heart, and tell me only what you truly feel 🌷
+I’ll always be grateful for you — and I’ll always be here.
+    </p>
+    <textarea rows="4" cols="34"
+    placeholder="Write something for Atif..."></textarea>
+    `;
+}
+
+function fireworks(){
+    for(let i=0;i<35;i++){
+        let f=document.createElement("div");
+        f.className="fire";
+        f.innerHTML="✨";
+        f.style.left=Math.random()*100+"vw";
+        f.style.top=Math.random()*100+"vh";
+        document.body.appendChild(f);
+        setTimeout(()=>f.remove(),1500);
+    }
+}
+</script>
+
+</body>
+</html>
